@@ -1,4 +1,4 @@
-Revman-Replicant
+Revman-Replicant-Browser
 ================
 Auto-generate randomized abstract style content from the "Data and Analysis" section of RevMan files.
 

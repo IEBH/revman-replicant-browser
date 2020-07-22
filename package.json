@@ -1,15 +1,13 @@
 {
-  "name": "revman-replicant",
-  "version": "0.0.15",
+  "name": "revman-replicant-browser",
+  "version": "0.1.0",
   "description": "Auto-generate randomized abstract style content from RevMan files",
   "main": "index.js",
   "dependencies": {
     "async-chainable": "^2.6.1",
     "handlebars": "^4.7.6",
-    "htmltidy2": "^0.3.0",
     "lodash": "^4.17.15",
-    "mersenne-twister": "^1.1.0",
-    "revman": "^1.4.2"
+    "mersenne-twister": "^1.1.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",

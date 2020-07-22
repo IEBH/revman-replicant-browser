@@ -1,10 +1,8 @@
 var _ = require('lodash');
 var async = require('async-chainable');
-var fs = require('fs');
 var handlebars = require('handlebars');
 var mersenneTwister = require('mersenne-twister');
-var revman = require('revman');
-var tidy = require('htmltidy2').tidy;
+// Removed revman, tidy, fs
 
 module.exports = function(options, finish) {
 	var settings = _.defaults(options, {
@@ -25,10 +23,10 @@ module.exports = function(options, finish) {
 		// }}}
 		// Read in all file contents {{{
 		.parallel({
-			grammar: next => fs.readFile(settings.grammar, 'utf-8', next),
+			grammar: next => next(null, settings.grammar),
 			revman: function(next) {
 				if (_.isObject(settings.revman)) return next(null, settings.revman); // Already an object
-				revman.parseFile(settings.revman, next);
+				next('Revman input is not an object')
 			},
 		})
 		// }}}
@@ -177,13 +175,13 @@ module.exports = function(options, finish) {
 		})
 		// }}}
 		// Tidy HTML {{{
-		.then('result', function(next) {
-			tidy(this.result, {
-				doctype: 'html5',
-				indent: true,
-				wrap: 0,
-			}, next)
-		})
+		// .then('result', function(next) {
+		// 	tidy(this.result, {
+		// 		doctype: 'html5',
+		// 		indent: true,
+		// 		wrap: 0,
+		// 	}, next)
+		// })
 		.then('result', function(next) {
 			// Misc text tidyups
 			next(null, this.result
