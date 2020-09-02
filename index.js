@@ -146,7 +146,7 @@ module.exports = function(options, finish) {
 				if (_.isUndefined(filterKey)) return 'FIXME:UNDEFINED filterKey!';
 				if (_.isUndefined(outputKey)) return 'FIXME:UNDEFINED outputKey!';
 				if(!_.isArray(data)) return 'FIXME: NOT ARRAY!';
-				var filtered = data.reduce((a, o) => (o[filterKey] && a.push(o[outputKey]), a), [])
+				var filtered = data.reduce((a, o) => (!o[filterKey] && a.push(o[outputKey]), a), [])
 				return filtered.join(', ').toLowerCase();
 			})
 			// }}}
