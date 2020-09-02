@@ -29,6 +29,13 @@ Format a given object key by an optional precision.
 This outcome had moderate levels of heterogeneity (I<sup>2</sup> = {{formatNumber i2 2}}%).
 ```
 
+fomratArray array
+---------------------------------
+Format an array to be seperated by ', '.
+
+```html
+We included: {{formatArray inclusionCriteria}}.
+```
 
 input type display description
 ------------------------------
