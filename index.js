@@ -131,7 +131,7 @@ module.exports = function(options, finish) {
 			handlebars.registerHelper('formatArray', function(data) {
 				if (_.isUndefined(data)) return 'FIXME:UNDEFINED!';
 				if(!_.isArray(data)) return 'FIXME: NOT ARRAY!';
-				return data.join(', ');
+				return data.join(', ').toLowerCase();
 			})
 			// }}}
 

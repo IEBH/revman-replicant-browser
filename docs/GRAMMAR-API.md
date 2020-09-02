@@ -31,7 +31,7 @@ This outcome had moderate levels of heterogeneity (I<sup>2</sup> = {{formatNumbe
 
 fomratArray array
 ---------------------------------
-Format an array to be seperated by ', '.
+Format an array to be lowercase and seperated by ', '.
 
 ```html
 We included: {{formatArray inclusionCriteria}}.
