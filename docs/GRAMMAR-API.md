@@ -45,7 +45,7 @@ Filter array by key === true & format an array to be lowercase and seperated by 
 We included: {{filterArray population 'inclusion' 'outcome'}}.
 ```
 
-!filterArray array filterKey outputKey
+notFilterArray array filterKey outputKey
 ---------------------------------
 Filter array by key === false & format an array to be lowercase and seperated by ', '.
 
