@@ -141,7 +141,7 @@ module.exports = function(options, finish) {
 				var filtered = data.reduce((a, o) => (o[filterKey] && a.push(o[outputKey]), a), [])
 				return filtered.join(', ').toLowerCase();
 			})
-			handlebars.registerHelper('!filterArray', function(data, filterKey, outputKey) {
+			handlebars.registerHelper('notFilterArray', function(data, filterKey, outputKey) {
 				if (_.isUndefined(data)) return 'FIXME:UNDEFINED!';
 				if (_.isUndefined(filterKey)) return 'FIXME:UNDEFINED filterKey!';
 				if (_.isUndefined(outputKey)) return 'FIXME:UNDEFINED outputKey!';
