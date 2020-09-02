@@ -37,12 +37,12 @@ Format an array to be lowercase and seperated by ', '.
 We included: {{formatArray inclusionCriteria}}.
 ```
 
-filterArray array key
+filterArray array filterKey outputKey
 ---------------------------------
 Filter array by key === true & format an array to be lowercase and seperated by ', '.
 
 ```html
-We included: {{filterArray population inclusion}}.
+We included: {{filterArray population 'inclusion' 'outcome'}}.
 ```
 
 input type display description

@@ -136,10 +136,7 @@ module.exports = function(options, finish) {
 			handlebars.registerHelper('filterArray', function(data, filterKey, outputKey) {
 				if (_.isUndefined(data)) return 'FIXME:UNDEFINED!';
 				if(!_.isArray(data)) return 'FIXME: NOT ARRAY!';
-				filtered = data.reduce((a, o) => { 
-					if(o[filterKey]) a.push(o[outputKey]) ;
-					return a;
-				}, [])
+				var filtered = data.reduce((a, o) => (o[filterKey] && a.push(o[outputKey]), a), [])
 				return filtered.join(', ').toLowerCase();
 			})
 			// }}}
