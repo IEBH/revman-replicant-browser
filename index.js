@@ -133,6 +133,12 @@ module.exports = function(options, finish) {
 				if(!_.isArray(data)) return 'FIXME: NOT ARRAY!';
 				return data.join(', ').toLowerCase();
 			})
+			handlebars.registerHelper('filterArray', function(data, key) {
+				if (_.isUndefined(data)) return 'FIXME:UNDEFINED!';
+				if(!_.isArray(data)) return 'FIXME: NOT ARRAY!';
+				filtered = data.filter(x => x[key] === true)
+				return filtered.join(', ').toLowerCase();
+			})
 			// }}}
 
 			// User prompting {{{

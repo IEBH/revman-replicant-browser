@@ -29,12 +29,20 @@ Format a given object key by an optional precision.
 This outcome had moderate levels of heterogeneity (I<sup>2</sup> = {{formatNumber i2 2}}%).
 ```
 
-fomratArray array
+fomatArray array
 ---------------------------------
 Format an array to be lowercase and seperated by ', '.
 
 ```html
 We included: {{formatArray inclusionCriteria}}.
+```
+
+filterArray array key
+---------------------------------
+Filter array by key === true & format an array to be lowercase and seperated by ', '.
+
+```html
+We included: {{filterArray population inclusion}}.
 ```
 
 input type display description

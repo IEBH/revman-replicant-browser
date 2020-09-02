@@ -1,6 +1,6 @@
 {
   "name": "revman-replicant-browser",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Auto-generate randomized abstract style content from RevMan files",
   "main": "index.js",
   "dependencies": {
