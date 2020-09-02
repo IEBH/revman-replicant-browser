@@ -128,6 +128,11 @@ module.exports = function(options, finish) {
 					'P = ' + _.round(data, 2) // Round to 2 dp (0.248869 => 0.25)
 				);
 			});
+			handlebars.registerHelper('formatArray', function(data) {
+				if (_.isUndefined(data)) return 'FIXME:UNDEFINED!';
+				if(!_.isArray(data)) return 'FIXME: NOT ARRAY!';
+				return data.toString();
+			})
 			// }}}
 
 			// User prompting {{{
