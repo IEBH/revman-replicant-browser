@@ -210,7 +210,7 @@ module.exports = function(options, finish) {
 				.replace(/\s+,\s/g, ', ')
 
 				// Add spaces after full-stops
-				.replace(/\.(?<!\s)/g, '. ')
+				.replace(/\.([^\s])/g, '. $1')
 			);
 		})
 		// }}}
